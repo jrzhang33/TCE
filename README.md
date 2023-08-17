@@ -1,6 +1,6 @@
 # TCE
 
-This repository hosts the official implementation of the paper entitled "Temporal Convolutional Explorer Helps Understand 1D-CNN's Learning Behavior in Time Series Classification from Frequency Domain", which has been accepted as a long paper at CIKM'23. 
+This repository hosts the implementation of the paper entitled "Temporal Convolutional Explorer Helps Understand 1D-CNN's Learning Behavior in Time Series Classification from Frequency Domain", which has been accepted as a long paper at CIKM'23. 
 
 ## Requirements
 
@@ -27,20 +27,14 @@ pip install -r requirements.txt
 The datasets can be obtained and put into `datasets/` folder in the following way:
 
 * [128 UCR datasets](https://www.cs.ucr.edu/~eamonn/time_series_data_2018) should be put into `datasets/` so that each data file can be located by `datasets/Univariate2018_arff/Univariate_arff/<dataset_name>/<dataset_name>_*.arff`.
+
 * [30 UEA datasets](http://www.timeseriesclassification.com) should be put into `datasets/` so that each data file can be located by `datasets/Multivariate2018_ts/Multivariate_ts/<dataset_name>/<dataset_name>_*.ts`.
+
 * [HAR ](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)should be  put into `datasets/` so that each data file can be located by `datasets/HAR`.
 
   
 
-[UCR/UEA]: http://www.timeseriesclassification.com/dataset.php
 
-    website provide all UCR/UEA  datasets, and you can download  any dataset and put it into `datasets/`  .
-
-
-
-[HAR]: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-
-    website provide HAR datasets, and you can download it and put it into `datasets/`  .
 
 
 ## Usage
@@ -51,16 +45,6 @@ The datasets can be obtained and put into `datasets/` folder in the following wa
 ```train & evaluate
 python main.py --loader 'UEA' --dataset 'UWaveGestureLibrary' --regulator True --model "ResNet"
 ```
-
-
-
--  About verifying  TCE's insight experienment,  the core code involves the following.
-
-1) filtering out specific proportions of LFCs added to HFCs
-
-2) skipping over the specific convolution layer.
-
-   These can be completed by specifying the "filter"  and "skip"  parameters in the above command.
 
 
 
@@ -88,5 +72,4 @@ python main.py --loader 'UEA' --dataset 'UWaveGestureLibrary' --regulator True -
 `TCE/models`:  1D-CNNs architecture for MTSC and UTSC.
 
 `TCE/regulator`:  Proposed regulatory framework, TCE with focus scale and frequency centroid,  filtering the specified frequency, skipped the the specified layer and training network with our regulatory framework.
-
 
