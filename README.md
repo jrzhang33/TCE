@@ -1,6 +1,6 @@
 # TCE
 
-This repository hosts the implementation of the paper entitled "Temporal Convolutional Explorer Helps Understand 1D-CNN's Learning Behavior in Time Series Classification from Frequency Domain", which has been accepted as a long paper at CIKM'23. 
+This repository hosts the implementation of the paper entitled "[Temporal Convolutional Explorer Helps Understand 1D-CNN's Learning Behavior in Time Series Classification from Frequency Domain](https://arxiv.org/abs/2310.05467)", which has been accepted as a long paper at CIKM'23. 
 
 ## Requirements
 
@@ -54,7 +54,7 @@ python main.py --loader 'UEA' --dataset 'UWaveGestureLibrary' --regulator True -
   | -------------- | ------------------------------------------------------------ |
   | dataset        | The dataset name                                             |
   | loader         | UCR/UEA/HAR                                                  |
-  | regulator      | equip or not equip regulatory framwork                       |
+  | regulator      | Equip or not equip regulatory framwork                       |
   | model          | ResNet, InceptionTime and FCN                                |
   | skip           | Specify the number of layers to skip (defaults to not be skipped) |
   | filter         | Specify filtered frequency component (defaults to not be filtered) |
@@ -72,4 +72,7 @@ python main.py --loader 'UEA' --dataset 'UWaveGestureLibrary' --regulator True -
 `TCE/models`:  1D-CNNs architecture for MTSC and UTSC.
 
 `TCE/regulator`:  Proposed regulatory framework, TCE with focus scale and frequency centroid,  filtering the specified frequency, skipped the the specified layer and training network with our regulatory framework.
+
+## Contact
+junruzhang@zju.edu.cn(mailto:junruzhang@zju.edu.cn)
 
