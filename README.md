@@ -74,5 +74,5 @@ python main.py --loader 'UEA' --dataset 'UWaveGestureLibrary' --regulator True -
 `TCE/regulator`:  Proposed regulatory framework, TCE with focus scale and frequency centroid,  filtering the specified frequency, skipped the the specified layer and training network with our regulatory framework.
 
 ## Contact
-junruzhang@zju.edu.cn(mailto:junruzhang@zju.edu.cn)
+[junruzhang@zju.edu.cn](mailto:junruzhang@zju.edu.cn)
 
